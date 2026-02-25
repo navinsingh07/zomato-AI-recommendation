@@ -1,0 +1,8 @@
+streamlit
+pandas
+pyarrow
+groq
+python-dotenv
+fastapi
+uvicorn
+slowapi

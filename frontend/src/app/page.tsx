@@ -215,7 +215,8 @@ export default function Home() {
                       <div
                         key={range}
                         className={`dropdown-item ${selectedPriceRange === range ? 'selected' : ''}`}
-                        onClick={() => {
+                        onMouseDown={(e) => {
+                          e.preventDefault();
                           setSelectedPriceRange(range);
                           setIsPriceOpen(false);
                         }}
@@ -265,7 +266,16 @@ export default function Home() {
                 {isCuisineOpen && filteredCuisines.length > 0 && (
                   <div className="custom-dropdown-list">
                     {filteredCuisines.map(c => (
-                      <div key={c} className="dropdown-item" onClick={() => toggleCuisine(c)}>{c}</div>
+                      <div
+                        key={c}
+                        className="dropdown-item"
+                        onMouseDown={(e) => {
+                          e.preventDefault();
+                          toggleCuisine(c);
+                        }}
+                      >
+                        {c}
+                      </div>
                     ))}
                   </div>
                 )}
@@ -302,7 +312,8 @@ export default function Home() {
                       <div
                         key={opt.val}
                         className={`dropdown-item ${minRating === opt.val ? 'selected' : ''}`}
-                        onClick={() => {
+                        onMouseDown={(e) => {
+                          e.preventDefault();
                           setMinRating(opt.val);
                           setIsRatingOpen(false);
                         }}

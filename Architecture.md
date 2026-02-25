@@ -9,7 +9,7 @@ This document describes the architecture for an **AI Restaurant Recommendation S
 
 **Data source:** [Hugging Face — ManikaSaini/zomato-restaurant-recommendation](https://huggingface.co/datasets/ManikaSaini/zomato-restaurant-recommendation) (~51.7k rows, ~574 MB / ~152 MB Parquet)
 
-**Frontend:** Next.js  
+**Frontend:** Next.js (Standard) / Streamlit (Deployment Ready)  
 **LLM:** Groq
 
 ---
@@ -118,7 +118,7 @@ This document describes the architecture for an **AI Restaurant Recommendation S
 | **Data** | Hugging Face `datasets` (or Parquet), ManikaSaini/zomato-restaurant-recommendation |
 | **LLM** | Groq API (e.g. Llama 3 or Groq-hosted model) |
 | **Backend / API** | Next.js API Routes (or separate Node service) |
-| **Frontend** | Next.js (React), preference form + results UI |
+| **Frontend** | Next.js (React) or Streamlit (Python) |
 | **Optional** | Redis or in-memory cache; env-based config for API keys and feature flags |
 
 ---
