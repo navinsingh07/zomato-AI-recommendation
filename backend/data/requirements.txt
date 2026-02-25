@@ -1,0 +1,9 @@
+streamlit
+uvicorn
+pandas
+groq
+python-dotenv
+fastapi
+slowapi
+pyarrow
+# Add any other libraries you use here
