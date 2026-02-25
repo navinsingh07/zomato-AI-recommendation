@@ -2,8 +2,8 @@ from fastapi import FastAPI, Query, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional, List
 from pydantic import BaseModel
-from .data_service import get_data_service
-from .groq_service import get_groq_service
+from data_service import get_data_service
+from groq_service import get_groq_service
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
